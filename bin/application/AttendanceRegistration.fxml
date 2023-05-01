@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="768.0" style="-fx-background-color: darkorange; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AttendanceRegistrationController">
+   <children>
+      <Label layoutX="151.0" layoutY="42.0" text="Lankomumo pildymas">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="139.0" text="Pasirinkti datą:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="139.0" text="Įvesti grupę:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="groupField" layoutX="563.0" layoutY="148.0" prefHeight="35.0" prefWidth="181.0" />
+      <DatePicker fx:id="myDatePicker" layoutX="69.0" layoutY="205.0" prefHeight="35.0" prefWidth="255.0" />
+      <Button layoutX="508.0" layoutY="214.0" mnemonicParsing="false" onAction="#searchForGroup" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 0;" text="Ieškoti">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="84.0" layoutY="266.0" text="Pasirinkti studentą:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ListView fx:id="myListView" layoutX="69.0" layoutY="330.0" prefHeight="204.0" prefWidth="466.0" />
+      <RadioButton fx:id="yes" layoutX="570.0" layoutY="359.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="166.0" selected="true" text="Dalyvavo" textAlignment="CENTER">
+         <toggleGroup>
+            <ToggleGroup fx:id="Dalyvavimas" />
+         </toggleGroup>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="no" layoutX="570.0" layoutY="414.0" mnemonicParsing="false" text="Nedalyvavo" textAlignment="CENTER" toggleGroup="$Dalyvavimas">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="587.0" layoutY="482.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 0;" text="Atnaujinti">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="320.0" layoutY="556.0" mnemonicParsing="false" onAction="#switchToMenu" style="-fx-background-color: black; -fx-background-radius: 0; -fx-text-fill: white;" text="Grįžti atgal">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="myTextField" layoutX="135.0" layoutY="-53.0" prefHeight="35.0" prefWidth="213.0" />
+   </children>
+</AnchorPane>

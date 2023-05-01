@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="768.0" style="-fx-background-color: darkorange; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentsAndGroupsController">
+   <children>
+      <Label layoutX="213.0" layoutY="25.0" text="Studentų įvedimas">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="95.0" text="Naujas studentas:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="330.0" layoutY="104.0" text="Vardas:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="440.0" layoutY="104.0" text="Pavardė:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="605.0" layoutY="104.0" text="Grupė:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="309.0" layoutY="135.0" prefHeight="26.0" prefWidth="118.0" />
+      <TextField fx:id="surnameField" layoutX="440.0" layoutY="136.0" />
+      <TextField fx:id="groupField" layoutX="603.0" layoutY="135.0" prefHeight="26.0" prefWidth="118.0" />
+      <Button layoutX="229.0" layoutY="173.0" mnemonicParsing="false" onAction="#submitStudent" style="-fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 0;" text="Pridėti" AnchorPane.leftAnchor="229.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="489.0" layoutY="173.0" mnemonicParsing="false" onAction="#updateStudent" style="-fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 0;" text="Atnaujinti">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ListView fx:id="myList" layoutX="25.0" layoutY="228.0" prefHeight="267.0" prefWidth="705.0" />
+      <Button layoutX="25.0" layoutY="552.0" mnemonicParsing="false" onAction="#importCSV" style="-fx-background-color: black; -fx-background-radius: 0; -fx-text-fill: white;" text="Importuoti iš csv failo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="544.0" layoutY="552.0" mnemonicParsing="false" onAction="#exportCSV" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 0;" text="Eksportuoti į csv failą">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="310.0" layoutY="546.0" mnemonicParsing="false" onAction="#switchToMenu" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 0;" text="Grįžti atgal">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="530.0" layoutY="505.0" mnemonicParsing="false" onAction="#exportExcel" style="-fx-text-fill: white; -fx-background-radius: 0; -fx-background-color: black;" text="Eksportuoti į excel failą">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="25.0" layoutY="505.0" mnemonicParsing="false" onAction="#importExcel" style="-fx-text-fill: white; -fx-background-color: black; -fx-background-radius: 0;" text="Importuoti iš excel failo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
